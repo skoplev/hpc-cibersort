@@ -5,7 +5,7 @@
 account="acc_STARNET"  # LSF account
 
 for file in input/*; do
-	gsub -J CIBERSORT \
+	bsub -J CIBERSORT \
 		-P $account \
 		-q alloc \
 		-W 12:00 \
