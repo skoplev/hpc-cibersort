@@ -33,6 +33,7 @@ expr_file = opt$args[1]
 # Load CIBERSORT source code
 source(file.path(opt$options$library, "CIBERSORT.R"))
 
+message("Running CIBERSORT on: ", expr_file)
 # Run CIBERSORT
 results = CIBERSORT(
 	opt$options$basis,  # path to basis expression file

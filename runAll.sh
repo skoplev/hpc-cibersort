@@ -16,7 +16,7 @@ for file in input/*; do
 		-e logs/error.%J \
 		-o logs/output.%J \
 		./runCibersort.r -l lib \
-			-b basis/LM22.tsv \
+			-b basis/primary_cells_svm_2942_aggregate.tsv \
 			-o cibersort_freq \
 			$file
 done
