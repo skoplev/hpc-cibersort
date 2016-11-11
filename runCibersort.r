@@ -45,7 +45,7 @@ dir.create(opt$options$output)  # create output folder
 write.table(results,
 	file.path(opt$options$output,
 		paste0(
-			strsplit(basename(expr_file), "[.]")[[1]][1],  # base file name without extension
+			basename(expr_file),
 			".tsv")),
 	sep="\t",
 	quote=FALSE)
