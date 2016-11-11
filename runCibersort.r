@@ -45,4 +45,5 @@ dir.create(opt$options$output)  # create output folder
 write.table(results,
 	file.path(opt$options$output,
 		paste0(basename(expr_file), ".freq")),
+	sep="\t",
 	quote=FALSE)
