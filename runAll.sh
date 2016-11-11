@@ -2,7 +2,7 @@
 # Submits LSF jobs for each file in input folder
 # Output tables written to cibersort_freq
 
-account="acc_STARNET"  # Minerva account
+account="acc_STARNET"  # LSF account
 
 for file in input/*; do
 	gsub -J CIBERSORT \
@@ -13,7 +13,7 @@ for file in input/*; do
 		-e logs/error.%J \
 		-o logs/output.%J \
 		runCibersort.r -l lib \
-			-b basis/sig.tsv \
+			-b basis/LM22.tsv \
 			-o cibersort_freq \
 			$file
 done
