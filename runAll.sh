@@ -5,11 +5,13 @@
 
 account="acc_STARNET"  # LSF account
 
+module load rstudio
+
 for file in input/*; do
 	bsub -J CIBERSORT \
 		-P $account \
 		-q alloc \
-		-W 12:00 \
+		-W 24:00 \
 		-n 4 \
 		-e logs/error.%J \
 		-o logs/output.%J \
