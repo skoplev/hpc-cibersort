@@ -13,10 +13,10 @@ for file in input/*; do
 		-q alloc \
 		-W 48:00 \
 		-n 4 \
-		-R rusage[mem=1000]
+		-R rusage[mem=1000] \
 		-e logs/error.%J \
 		-o logs/output.%J \
-		./runCibersort.r -l lib \
+		./src/runCibersort.r -l lib \
 			-b basis/primary_cells_svm_2942_aggregate.tsv \
 			-o out_freq \
 			$file
